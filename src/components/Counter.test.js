@@ -85,7 +85,6 @@ describe('Counter component', () => {
     const counterWrapper = mount(<Counter/>);
     let counter = counterWrapper.find('.counter');
     const increaseButton = counterWrapper.find({ increase: true });
-    const decreaseButton = counterWrapper.find({ decrease: true });
     const changeButton = counterWrapper.find({ change: true });
     const userInput = counterWrapper.find('#user-value');
     const randomNumber = Math.floor((Math.random() * 10) + 1);
@@ -100,9 +99,5 @@ describe('Counter component', () => {
     increaseButton.simulate('click');
     counter = counterWrapper.find('.counter');
     expect(parseInt(counter.text())).toBe(randomNumber + 1);
-
-    decreaseButton.simulate('click');
-    counter = counterWrapper.find('.counter');
-    expect(parseInt(counter.text())).toBe(randomNumber);
   });
 })
