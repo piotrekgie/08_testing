@@ -1,4 +1,3 @@
-import renderer from 'react-test-renderer';
 import sum from "./sum";
 
 it('should sum be correctly', () => {
