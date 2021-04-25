@@ -5,7 +5,7 @@ import CounterButton from "./CounterButton";
 import Counter from "./Counter";
 
 describe('Counter component', () => {
-  it('should render correct', () => {
+  it('should render correctly', () => {
     const counterWrapper = shallow(<Counter/>);
 
     expect(counterWrapper.find('.counter').exists()).toBeTruthy();
